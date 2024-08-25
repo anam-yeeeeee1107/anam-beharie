@@ -1,0 +1,238 @@
+html, body {
+    background-color: rgba(255, 161, 212, 0.82);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header nestedgrid1"
+                         "main_2 main_2"
+                         "footer footer";
+    text-align: center;
+}
+
+#header{
+    grid-area: header;
+    font-size: 30px;
+}
+
+#nestedgrid1 {
+    grid-area: nestedgrid1;  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "home aboutme myculture gallery";
+    background-color: rgb(255, 209, 186);
+    font-size: 20px;
+    align-content: center;
+}
+
+#home {
+  grid-area: home;
+  padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#home:hover {
+  transform: scale(1.25);
+}
+
+#aboutme {
+    grid-area: aboutme;
+    padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#aboutme:hover {
+  transform: scale(1.25);
+}
+
+#myculture {
+    grid-area: myculture;
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#myculture:hover {
+  transform: scale(1.25);
+}
+
+#gallery {
+    grid-area: gallery; 
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#gallery:hover {
+  transform: scale(1.25);
+}
+
+#main_2 {
+    grid-area: main_2;
+    display: grid;
+    grid-template-areas: "myself me hobbies"
+                         "important accomplishments interests hobbies";
+     font-family: 'Anonymous Pro', sans-serif;
+  text-transform: none;
+    font-weight: 500;
+    line-height: 18px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#myself {
+    grid-area: myself;
+    margin-top: -350px;
+    margin-left: -390px;
+    max-width: 343px;
+    
+}
+
+.me {
+    display: grid;
+    grid-template-areas: "anam anam"
+                         "lake lake";
+}
+
+.anam {
+grid-area: anam;
+    float:left;
+  width: 40%;
+    height: 80%;
+margin-top: 180px;
+    margin-left: -4px;
+}
+
+/* Clear floats after image containers */
+.me::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.anam img {
+    max-height: 300px;
+    max-width: 150px;
+    position: relative;
+    top: -100px;
+    padding-left: 80px;
+    margin-left: 390px;
+}
+
+
+#lake {
+    grid-area: lake;
+    max-width: 333px;
+    max-height: 100px;
+    position: absolute;
+    top: 323px;
+    padding-left: 80px;
+    margin-left: 385px;
+    margin-top: 150px;
+}
+
+#hobbies {
+    grid-area: hobbies;
+    max-width: 350px;
+    margin-left: 390px;
+    margin-top: -350px;
+}
+
+.important {
+    grid-area: important;
+    display: grid;
+    grid-template-areas: "things things";
+}
+
+.things {
+grid-area: things;
+    float:left;
+  width: -160%;
+    height: 80%;
+    margin-left: 190px;
+    margin-right: -155px;
+}
+
+/* Clear floats after image containers */
+.important::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.things img {
+    max-height: 300px;
+    max-width: 150px;
+    position:relative;
+    top: 570px;
+    left: -585px;
+}
+
+#accomplishments {
+    grid-area: accomplishments;
+    margin-top: 150px;
+    margin-right: 900px;
+    max-width: 343px;
+}
+
+.interests {
+    grid-area: interests;
+    display: grid;
+    grid-template-areas: "fun fun";
+}
+
+.fun {
+grid-area: fun;
+    float:right;
+  width: 40%;
+    height: 80%;
+margin-top:300px;
+}
+
+/* Clear floats after image containers */
+.interests::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fun img {
+    max-height: 300px;
+    max-width: 150px;
+    position: relative;
+    top: -115px;
+    right: -300px;
+    padding-left: 80px;
+    margin-left: 390px;
+}
+
+
+#myself, #hobbies, #accomplishments {
+    height: 60vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: -55px;
+}
+
+#footer a{
+    position: relative;
+  left: -45%;
+  top: -45%;
+}
+
+#header, #footer {
+      background-color: rgb(204, 204, 255);
+}

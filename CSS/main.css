@@ -1,0 +1,134 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header nestedgrid1"
+                         "main main"
+                         "footer footer";
+    text-align: center;
+}
+
+#header{
+    grid-area: header;
+    font-size: 30px;
+}
+
+#nestedgrid1 {
+    grid-area: nestedgrid1;  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "home aboutme myculture gallery";
+    background-color: rgb(255, 209, 186);
+    font-size: 20px;
+    align-content: center;
+}
+
+#home {
+  grid-area: home;
+  padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#home:hover {
+  transform: scale(1.25);
+}
+
+#aboutme {
+    grid-area: aboutme;
+    padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#aboutme:hover {
+  transform: scale(1.25);
+}
+
+#myculture {
+    grid-area: myculture;
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#myculture:hover {
+  transform: scale(1.25);
+}
+
+#gallery {
+    grid-area: gallery; 
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#gallery:hover {
+  transform: scale(1.25);
+}
+
+#main {
+    grid-area: main;
+    background-image: url("../Images/img_beach.jpg");
+    background-size: cover;
+    background-position: center center; /* Optional: Center the background image */
+    margin: 0; /* Ensure no default margins */
+    padding: 0; /* Ensure no default padding */
+    border: 0; /* Ensure no default border */
+    height: 61vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+#main {
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+#main h1 {
+  font-size: 30px;
+  transition: transform 1s;
+  margin: 0;
+}
+
+#main a {
+    color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+#main h1:hover {
+  transform: scale(1.25);
+}
+
+
+#main h3 {
+  font-size: 20px;
+  text-align:center;
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+#footer a{
+    position: relative;
+  left: -45%;
+  top: -45%;
+}
+
+#header, #footer {
+      background-color: rgb(204, 204, 255);
+ 
+}

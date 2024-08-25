@@ -1,0 +1,120 @@
+html, body {
+    background-color: rgba(255, 161, 212, 0.82);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header nestedgrid1"
+                         "main5 main5"
+                         "footer footer";
+    text-align: center;
+}
+
+#header{
+    grid-area: header;
+    font-size: 30px;
+}
+
+#nestedgrid1 {
+    grid-area: nestedgrid1;  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "home aboutme myculture gallery";
+    background-color: rgb(255, 209, 186);
+    font-size: 20px;
+    align-content: center;
+}
+
+
+#home {
+  grid-area: home;
+  padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#home:hover {
+  transform: scale(1.25);
+}
+
+#aboutme {
+    grid-area: aboutme;
+    padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#aboutme:hover {
+  transform: scale(1.25);
+}
+
+#myculture {
+    grid-area: myculture;
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#myculture:hover {
+  transform: scale(1.25);
+}
+
+#gallery {
+    grid-area: gallery; 
+     padding: 5px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+#gallery:hover {
+  transform: scale(1.25);
+}
+
+#main5 {
+    grid-area: main5;
+    display: grid;
+    grid-template-areas: "img1 img2";
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    text-align: center;
+}
+
+#img1 {
+    max-width: 750px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+#img2 {
+    max-width: 270px;
+    margin-top: 170px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#footer a{
+    position: relative;
+  left: -45%;
+  top: -45%;
+}
+
+#header, #footer {
+      background-color: rgb(204, 204, 255);
+ 
+}
